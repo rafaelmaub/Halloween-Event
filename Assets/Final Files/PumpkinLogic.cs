@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class PumpkinLogic : MonoBehaviour
 {
+
+    GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+        gameManager.totalPumpkins++;
+    }
+
     private void Update()
     {
         //Rotate
@@ -14,6 +23,7 @@ public class PumpkinLogic : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            gameManager.PickUpPumpkin();
             Destroy(gameObject);
         }
     }

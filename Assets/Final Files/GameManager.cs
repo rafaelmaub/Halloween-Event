@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int totalPumpkins;
+    private int amountOfPumpkins;
+
     //reference to door
     //reference to amount of pumpkins
     // Start is called before the first frame update
@@ -19,6 +22,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void PickUpPumpkin()
+    {
+        amountOfPumpkins = amountOfPumpkins + 1;
+        if(amountOfPumpkins == totalPumpkins)
+        {
+            //WIN GAME
+        }
+
+    }
     //Method PickUpPumpkin()
     //Increase Count
     //If == 3 then open door
