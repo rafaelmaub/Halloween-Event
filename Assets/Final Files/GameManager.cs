@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject gate;
     public int totalPumpkins;
     private int amountOfPumpkins;
 
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
         if(amountOfPumpkins == totalPumpkins)
         {
             //WIN GAME
+            gate.SetActive(false);
         }
 
     }
