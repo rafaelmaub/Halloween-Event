@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject gate;
+    public GameObject restartGameScreen;
+    public GameObject WinGameScreen;
     public int totalPumpkins;
     private int amountOfPumpkins;
 
@@ -21,6 +23,16 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Count game timer
+
+    }
+
+    public void PlayerCaught() //When entered the Ghost trigger
+    {
+
+    }
+
+    public void PlayerEscaped() //When entered the escape trigger (outside graveyard)
+    {
 
     }
 
