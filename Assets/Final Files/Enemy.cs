@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         //Moving enemy
+        transform.Translate(transform.forward * Time.deltaTime * speed);
     }
 }
