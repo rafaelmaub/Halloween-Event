@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject gate;
+    public GameObject restartGameScreen;
+    public GameObject WinGameScreen;
     public int totalPumpkins;
     private int amountOfPumpkins;
 
@@ -22,12 +26,23 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void PlayerCaught() //When entered the Ghost trigger
+    {
+
+    }
+
+    public void PlayerEscaped() //When entered the escape trigger (outside graveyard)
+    {
+
+    }
+
     public void PickUpPumpkin()
     {
         amountOfPumpkins = amountOfPumpkins + 1;
         if(amountOfPumpkins == totalPumpkins)
         {
             //WIN GAME
+            gate.SetActive(false);
         }
 
     }
